@@ -1,0 +1,179 @@
+/* Imports */
+// Icons
+@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+@import url('font-awesome/css/all.css');
+// Bootstrap 4.3
+@import url('bootstrap/css/bootstrap.min.css');
+// Roboto Font
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* Functions */
+@function randomWidthBars($min, $max){
+    $rand: random();
+    $randomNum: $min + floor($rand * (($max - $min) + 1));
+
+    @return $randomNum;
+}
+
+/* Vars Colors */
+$bodyColor: linear-gradient(to bottom right, #881616, #a52a2a);
+$spanBarsColor: #eeeeee;
+$mainTitleColor: #f0cb5c;
+$socialMediaColor: #303030;
+$socialMediaColorHover: #262626;
+$sidebarNavColor: #0B2240;
+$sidebarNavItemColor: linear-gradient(to right, #F23322, #F2B90C);
+$sidebarNavLinkColor: #cccccc;
+$sidebarNavLinkColorHover: #ffffff;
+
+/* CSS Code */
+html, body {
+    background-image: $bodyColor;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+/* Sidebar */
+#sidebar {
+    position: relative;
+    z-index: 1000;
+}
+
+#sidebar .menu {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 2000;
+}
+    #sidebar .menu i {
+        font-size: 2.5rem;
+        color: $spanBarsColor;
+        cursor: pointer;
+    }
+
+    #sidebar .menu .oi-x {
+        display: none;
+    }
+
+
+/* Sidebar Nav Links */
+#sidebar ul {
+    position: absolute;
+    width: 25rem;
+    height: 100vh;
+    padding: 2rem;
+    padding-top: 4rem;
+    background-color: $sidebarNavColor;
+    z-index: 1500;
+    transform: translateX(-25rem);
+}
+
+#sidebar ul li {
+    position: relative;
+    margin: .5rem 0;
+    padding: .5rem 0;
+}
+
+#sidebar ul li::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background: $sidebarNavItemColor;
+}
+
+#sidebar ul li a {
+    font-size: 1.5rem;
+    color: $sidebarNavLinkColor;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 400ms;
+    position: relative;
+}
+    #sidebar ul li a:hover {
+        color: $sidebarNavLinkColorHover;
+    }
+
+    #sidebar ul li a i {
+        position: absolute;
+        right: 3rem;
+        top: .8rem;
+    }
+
+
+/* Sidebar Open */
+.nav-open {
+    transform: translateX(25rem);
+}
+
+
+/* Main */
+main {
+    position: relative;
+}
+.main-title {
+    margin: 8vh 0 4vh 0;
+}
+
+    .main-title h1 {
+        color: $mainTitleColor;
+        text-shadow: 2px 2px #000000;
+        margin-bottom: -18px;
+    }
+
+    .main-title span {
+        font-size: 3rem;
+        margin-left: 10rem;
+        color: #1a1a1a;
+    }
+
+/* Generate Bars */
+.span-bars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .span-bars div {
+        height: 2rem;
+        background-color: $spanBarsColor;
+        border-radius: 20rem;
+        margin: .5rem 0;
+    }
+
+    @for $ct from 0 to 9 {
+        $width: randomWidthBars(40, 60);
+        .span-bars div:nth-child(#{$ct}) {
+            width: percentage($width)/100;
+        }
+    }
+
+
+/* Social Media Buttons */
+.social-media {
+    margin-top: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .social-media a {
+        font-size: 4rem;
+        margin: 0 2rem;
+        color: $socialMediaColor;
+    }
+
+    .social-media a:hover {
+        transition: color 400ms;
+        color: $socialMediaColorHover;
+    }
+
+.footer {
+    z-index: inherit;
+    font-size: 1.5rem;
+    color: $spanBarsColor;
+}

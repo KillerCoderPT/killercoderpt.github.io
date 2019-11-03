@@ -1,18 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 
-<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- KillerCoderPT CSS -->
+    <link rel="stylesheet" href="css/site.css">
+
+    <title>KillerCoderPT - GitHub.io</title>
 </head>
 
 <body>
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+    <div id="sidebar">
+        <div class="menu">
+            <i class="oi oi-menu"></i>
+            <i class="oi oi-x"></i>
+        </div>
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a href="./" class="nav-link">Home <i class="fas fa-home"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:alert('Under construction')" class="nav-link">Services <i class="fas fa-book-open"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:alert('Under construction')" class="nav-link">Contact <i class="fas fa-id-badge"></i></a>
+            </li>
+        </ul>
+    </div>
 
+
+    <main>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-lg-8" style="height: 100vh;">
+                    <div class="main-title text-center">
+                        <h1 class="display-1">KillerCoderPT</h1>
+                        <span>FullStack Developer</span>
+                    </div>
+                    <div class="span-bars">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="social-media">
+                        <a target="_blank" href="https://www.linkedin.com/in/nuno-garcia-19b6b3138/" title="Linkedin"><i class="fab fa-linkedin"></i></a>
+                        <a target="_blank" href="https://github.com/KillerCoderPT" title="GitHub"><i class="fab fa-github-square"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/NunoGarcia.95" title="Facebook"><i class="fab fa-facebook-square"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/killercoder/" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="javascript:void(0);" title="Twitter"><i class="fab fa-twitter-square"></i></a>
+                    </div>
+                    
+                    <p class="fixed-bottom text-center footer">&copy; KillerCoderPT. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="css/bootstrap/js/jquery-3.4.1.min.js"></script>
+    <script src="css/bootstrap/js/popper.min.js"></script>
+    <script src="css/bootstrap/js/bootstrap.min.js"></script>
+    <!-- KillerCoderPT JavaScript -->
+    <script>
+        $(document).ready(function () {
+            $('.menu').children().click(function () {
+
+                if (!$('#sidebar').hasClass('nav-open')) {
+                    $('#sidebar').addClass('nav-open');
+                    $('.oi-menu').css({'display' : 'none'});
+                    $('.oi-x').css({'display' : 'block'});
+                }
+                else {
+                    $('#sidebar').removeClass('nav-open');
+                    $('.oi-x').css({'display' : 'none'});
+                    $('.oi-menu').css({'display' : 'block'});
+                }
+            });
+        });
+    </script>
 </body>
 </html>

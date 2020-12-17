@@ -1,96 +1,41 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- KillerCoderPT CSS -->
-    <link rel="stylesheet" href="css/site.css">
+    <title>KillerCoderPT - Web Developer</title>
 
-    <title>KillerCoderPT - GitHub.io</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <!-- Bootstrap CSS from a CDN. This way you don't have to include the bootstrap file yourself -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Your own stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-
-    <div id="sidebar">
-        <div class="menu">
-            <i class="oi oi-menu"></i>
-            <i class="oi oi-x"></i>
+    <div class="container d-flex align-items-center h-100">
+        <div class="row">
+            <header class="text-center col-12">
+                <h1><strong class="text-uppercase">The computer was born to solve problems that did not exist before.</strong></h1>
+                <h1 class="text-right"><span>- Bill Gates</span></h1>
+            </header>
+            <div class="buffer col-12"></div>
+            <section class="text-center col-12">
+                <hr>
+                <a href="https://mailchi.mp/3d6812a61c67/killercoder">
+                    <button class="btn btn-primary btn-xl">Find out more</button>
+                </a>
+            </section>
         </div>
-
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a href="./" class="nav-link">Home <i class="fas fa-home"></i></a>
-            </li>
-            <li class="nav-item">
-                <a href="javascript:alert('Under construction')" class="nav-link">Services <i class="fas fa-book-open"></i></a>
-            </li>
-            <li class="nav-item">
-                <a href="javascript:alert('Under construction')" class="nav-link">Contact <i class="fas fa-id-badge"></i></a>
-            </li>
-        </ul>
     </div>
-
-
-    <main>
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-lg-8" style="height: 100vh;">
-                    <div class="main-title text-center">
-                        <h1 class="display-1">KillerCoderPT</h1>
-                        <span>FullStack Developer</span>
-                    </div>
-                    <div class="span-bars">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <div class="social-media">
-                        <a target="_blank" href="https://www.linkedin.com/in/nuno-garcia-19b6b3138/" title="Linkedin"><i class="fab fa-linkedin"></i></a>
-                        <a target="_blank" href="https://gist.github.com/KillerCoderPT" title="GitHub"><i class="fab fa-github-square"></i></a>
-                        <a target="_blank" href="https://www.facebook.com/NunoGarcia.95" title="Facebook"><i class="fab fa-facebook-square"></i></a>
-                        <a target="_blank" href="https://www.instagram.com/killercoder/" title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="javascript:void(0);" title="Twitter"><i class="fab fa-twitter-square"></i></a>
-                    </div>
-                    
-                    <p class="fixed-bottom text-center footer">&copy; KillerCoderPT. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </main>
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="css/bootstrap/js/jquery-3.4.1.min.js"></script>
-    <script src="css/bootstrap/js/popper.min.js"></script>
-    <script src="css/bootstrap/js/bootstrap.min.js"></script>
-    <!-- KillerCoderPT JavaScript -->
-    <script>
-        $(document).ready(function () {
-            $('.menu').children().click(function () {
-
-                if (!$('#sidebar').hasClass('nav-open')) {
-                    $('#sidebar').addClass('nav-open');
-                    $('.oi-menu').css({'display' : 'none'});
-                    $('.oi-x').css({'display' : 'block'});
-                }
-                else {
-                    $('#sidebar').removeClass('nav-open');
-                    $('.oi-x').css({'display' : 'none'});
-                    $('.oi-menu').css({'display' : 'block'});
-                }
-            });
-        });
-    </script>
 </body>
+
 </html>
